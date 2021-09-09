@@ -3,6 +3,8 @@ import ButtonAppBar from './Components/AppBar.js'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './Pages/Home.js'
 import Gallery from './Pages/Gallery.js'
+import Hotels from './Pages/Hotels.js'
+import PrimarySearchAppBar from './Components/SearchAppBar.js';
 
 
 function App() {
@@ -11,6 +13,7 @@ function App() {
       {/* Header (Navigation Bar) */}
       <header className="App-header">
       <ButtonAppBar/>
+      <PrimarySearchAppBar/>
       </header>
       
       {/* Router - Pages */}
@@ -18,6 +21,7 @@ function App() {
             <Route path={process.env.PUBLIC_URL + '/'} exact > <Home/> </Route>
             <Route path={process.env.PUBLIC_URL + '/home'} > <Home/> </Route>
             <Route path={process.env.PUBLIC_URL + '/gallery'}  > <Gallery/> </Route>
+            <Route path={process.env.PUBLIC_URL + '/hotels'}  > <Hotels/> </Route>
           </Switch>
 
       <footer className="App-footer">
